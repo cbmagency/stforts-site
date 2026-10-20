@@ -49,7 +49,40 @@ export function SiteEffects() {
 }
 
 type Variant = "callback" | "planning";
+/** GoHighLevel form embed. Used when NEXT_PUBLIC_GHL_FORM_ID is set, so every
+ *  submission lands in GHL (Sites → Forms → Submissions) and triggers its workflow. */
+function GhlForm({ formId }: { formId: string }) {
+  useEffect(() => {
+    if (document.getElementById("ghl-form-embed")) return;
+    const s = document.createElement("script");
+    s.id = "ghl-form-embed";
+    s.src = "https://link.msgsndr.com/js/form_embed.js";
+    s.async = true;
+    document.body.appendChild(s);
+  }, []);
+  return (
+    <iframe
+      src={`https://api.leadconnectorhq.com/widget/form/${formId}`}
+      id={`inline-${formId}`}
+      title="St. Fort's inquiry form"
+      data-layout="{'id':'INLINE'}"
+      data-trigger-type="alwaysShow"
+      data-activation-type="alwaysActivated"
+      data-deactivation-type="neverDeactivate"
+      data-form-name="St. Fort's Website Inquiry"
+      data-form-id={formId}
+      style={{ width: "100%", minHeight: 620, border: "none", borderRadius: 2, background: "transparent" }}
+    />
+  );
+}
+
 export function LeadForm({ variant = "callback", source }: { variant?: Variant; source?: string }) {
+  const ghlFormId = process.env.NEXT_PUBLIC_GHL_FORM_ID;
+  if (ghlFormId) return <GhlForm formId={ghlFormId} />;
+  return <NativeLeadForm variant={variant} source={source} />;
+}
+
+function NativeLeadForm({ variant = "callback", source }: { variant?: Variant; source?: string }) {
   const [state, setState] = useState<"idle" | "sending" | "done" | "error">("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
 
