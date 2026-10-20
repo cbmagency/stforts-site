@@ -215,7 +215,7 @@ export function Concierge() {
           </div>
           <div className="opts" data-track="concierge">
             <a className="opt" href={SITE.helpPhoneHref}><span>I need help now<small>Speak with a funeral director, 24/7</small></span><PhoneIcon className="w4" /></a>
-            <a className="opt" href="/pre-planning#consult"><span>Pre-plan a funeral<small>Free, private consultation</small></span><ArrowIcon className="w4" /></a>
+            <a className="opt" href={SITE.bookingHref ? "/pre-planning#book" : "/pre-planning#consult"}><span>Pre-plan a funeral<small>{SITE.bookingHref ? "Book a free virtual consultation" : "Free, private consultation"}</small></span><ArrowIcon className="w4" /></a>
             <a className="opt" href="/pricing"><span>See our prices<small>Cremation from $1,595</small></span><ArrowIcon className="w4" /></a>
             <a className="opt" href={SITE.whatsappHref} target="_blank" rel="noopener noreferrer"><span>Message us on WhatsApp<small>English · Español · Kreyòl</small></span><ChatIcon className="w4" /></a>
           </div>

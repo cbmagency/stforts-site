@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Faq, JsonLd, PageHero, crumbs, faqSchema } from "@/components/blocks";
 import { LeadForm } from "@/components/client";
+import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Funeral Pre-Planning in North Miami Beach | Pre-Arrange a Funeral or Cremation | St. Fort's",
@@ -51,6 +52,20 @@ export default function PlanningAhead() {
           </div>
         </div>
       </section>
+      {SITE.bookingHref && (
+        <section className="section" id="book" aria-labelledby="book-h">
+          <div className="wrap" style={{ display: "grid", gap: 40 }}>
+            <div className="reveal" style={{ display: "grid", gap: 18, maxWidth: 760 }}>
+              <p className="eyebrow">Virtual consultation</p>
+              <h2 id="book-h" className="h2">Meet with Evans <em>from home.</em></h2>
+              <p className="lede">Pick a time that works for you. Consultations are by Google Meet, Monday through Wednesday afternoons, and you&rsquo;ll get the link by email.</p>
+            </div>
+            <div className="card reveal" style={{ padding: 0, overflow: "hidden", background: "#fff" }}>
+              <iframe src={SITE.bookingHref} title="Book a virtual pre-planning consultation" style={{ width: "100%", minHeight: 760, border: 0, display: "block" }} loading="lazy" />
+            </div>
+          </div>
+        </section>
+      )}
       <Faq faqs={FAQ} title="Funeral pre-planning questions" />
       <JsonLd data={faqSchema(FAQ)} />
       <JsonLd data={crumbs([{ name: "Home", path: "/" }, { name: "Pre-Planning", path: "/pre-planning" }])} />

@@ -10,6 +10,8 @@ export const SITE = {
   // Death calls / immediate need go straight to Evans (client decision, Oct 20, 2026).
   helpPhone: "(305) 710-7919",
   helpPhoneHref: "tel:+13057107919",
+  // GHL booking calendar: "Virtual Pre-Planning Consultation" (Google Meet, Mon–Wed 12–4 ET).
+  bookingHref: process.env.NEXT_PUBLIC_GHL_BOOKING_URL || "",
   mainLine: "(305) 940-1428",
   mainLineHref: "tel:+13059401428",
   whatsappHref:
