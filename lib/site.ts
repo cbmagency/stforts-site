@@ -7,6 +7,9 @@ export const SITE = {
   phone: "(754) 707-2631",
   phoneHref: "tel:+17547072631",
   phoneE164: "+1-754-707-2631",
+  // Death calls / immediate need go straight to Evans (client decision, Oct 20, 2026).
+  helpPhone: "(305) 710-7919",
+  helpPhoneHref: "tel:+13057107919",
   mainLine: "(305) 940-1428",
   mainLineHref: "tel:+13059401428",
   whatsappHref:

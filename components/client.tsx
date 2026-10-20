@@ -122,7 +122,7 @@ function NativeLeadForm({ variant = "callback", source }: { variant?: Variant; s
         <p className="h3" style={{ color: "var(--ivory)" }}>Thank you.</p>
         <p style={{ marginTop: 10 }}>
           A member of our team will reach out shortly. If this is urgent, please call us now at{" "}
-          <a className="link" href={SITE.phoneHref} data-track="form_thanks">{SITE.phone}</a>.
+          <a className="link" href={SITE.helpPhoneHref} data-track="form_thanks">{SITE.helpPhone}</a>.
         </p>
       </div>
     );
@@ -214,7 +214,7 @@ export function Concierge() {
             <button aria-label="Close" onClick={() => setOpen(false)} style={{ width: 32, height: 32, color: "var(--ivory)" }}><CloseIcon /></button>
           </div>
           <div className="opts" data-track="concierge">
-            <a className="opt" href={SITE.phoneHref}><span>I need help now<small>Speak with a funeral director, 24/7</small></span><PhoneIcon className="w4" /></a>
+            <a className="opt" href={SITE.helpPhoneHref}><span>I need help now<small>Speak with a funeral director, 24/7</small></span><PhoneIcon className="w4" /></a>
             <a className="opt" href="/pre-planning#consult"><span>Pre-plan a funeral<small>Free, private consultation</small></span><ArrowIcon className="w4" /></a>
             <a className="opt" href="/pricing"><span>See our prices<small>Cremation from $1,595</small></span><ArrowIcon className="w4" /></a>
             <a className="opt" href={SITE.whatsappHref} target="_blank" rel="noopener noreferrer"><span>Message us on WhatsApp<small>English · Español · Kreyòl</small></span><ChatIcon className="w4" /></a>

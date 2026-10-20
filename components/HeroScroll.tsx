@@ -116,7 +116,7 @@ export default function HeroScroll() {
           <div className="wrap">
             <h1 className="hero-h1">Funeral &amp; Cremation Services in North Miami Beach</h1>
             <div className="hero-actions">
-              <a href={SITE.phoneHref} className="btn btn-light" data-track="hero"><PhoneIcon /> Speak with a funeral director</a>
+              <a href={SITE.helpPhoneHref} className="btn btn-light" data-track="hero"><PhoneIcon /> Speak with a funeral director</a>
               <a href="/pre-planning" className="btn btn-ghost">Pre-plan a funeral</a>
             </div>
             <div className="hero-meta">
