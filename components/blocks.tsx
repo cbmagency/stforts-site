@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SITE } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
 import { AREAS } from "@/lib/locations";
+import { EXTRAS, PACKAGES, PRICE_NOTE } from "@/lib/pricing";
 import { LeadForm } from "./client";
 import { ArrowIcon, ChatIcon, PhoneIcon } from "./icons";
 
@@ -195,6 +196,7 @@ export function Footer() {
             <h4>St. Fort&rsquo;s</h4>
             <ul>
               <li><Link href="/immediate-need">Immediate need</Link></li>
+              <li><Link href="/pricing">Pricing</Link></li>
               <li><Link href="/planning-ahead">Planning ahead</Link></li>
               <li><Link href="/our-founder">Our founder</Link></li>
               <li><Link href="/our-team">Our team</Link></li>
@@ -245,6 +247,41 @@ export function StickyBar() {
     <div className="sticky-bar" data-track="sticky">
       <a className="call" href={SITE.phoneHref}><PhoneIcon /> Call 24/7</a>
       <a className="wa" href={SITE.whatsappHref} target="_blank" rel="noopener noreferrer"><ChatIcon /> WhatsApp</a>
+    </div>
+  );
+}
+
+export function PricingCards({ extras = false }: { extras?: boolean }) {
+  return (
+    <div style={{ display: "grid", gap: 40 }}>
+      <div className="pkgs" data-track="pricing">
+        {PACKAGES.map((p) => (
+          <article key={p.slug} className={`pkg reveal ${p.featured ? "featured" : ""}`} aria-labelledby={`pkg-${p.slug}`}>
+            <span className="pkg-badge">{p.badge}</span>
+            <h3 id={`pkg-${p.slug}`} className="pkg-name">{p.name}</h3>
+            <p className="pkg-price"><span>Starting at</span>{p.price}</p>
+            <p className="pkg-sum">{p.summary}</p>
+            <ul className="pkg-list">
+              {p.includes.map((i) => <li key={i}>{i}</li>)}
+            </ul>
+            <a className={`btn ${p.featured ? "btn-light" : "btn-ghost"}`} href={SITE.phoneHref}>
+              <PhoneIcon /> Call to get started
+            </a>
+          </article>
+        ))}
+      </div>
+      {extras && (
+        <div className="extras reveal">
+          {EXTRAS.map((e) => (
+            <div key={e.name} className="extra">
+              <h3 className="h3">{e.name}</h3>
+              <p className="price" style={{ marginTop: 6 }}>{e.price}</p>
+              <p style={{ marginTop: 10, fontSize: 15 }}>{e.body}</p>
+            </div>
+          ))}
+        </div>
+      )}
+      <p className="muted reveal" style={{ textAlign: "center", maxWidth: 760, justifySelf: "center" }}>{PRICE_NOTE}</p>
     </div>
   );
 }

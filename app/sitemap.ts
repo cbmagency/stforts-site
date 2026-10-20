@@ -7,7 +7,7 @@ import { POSTS } from "@/lib/content";
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const paths = [
-    "", "/immediate-need", "/services", "/planning-ahead", "/our-team", "/our-founder", "/contact", "/areas", "/insights",
+    "", "/immediate-need", "/services", "/planning-ahead", "/our-team", "/our-founder", "/pricing", "/contact", "/areas", "/insights",
     ...SERVICES.map((s) => `/services/${s.slug}`),
     ...AREAS.map((a) => `/areas/${a.slug}`),
     ...POSTS.map((p) => `/insights/${p.slug}`),

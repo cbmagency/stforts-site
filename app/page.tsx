@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import HeroScroll from "@/components/HeroScroll";
-import { AreaChips, ClosingCta, Faq, JsonLd, Paths, ServiceRows, faqSchema } from "@/components/blocks";
+import { AreaChips, ClosingCta, Faq, JsonLd, Paths, PricingCards, ServiceRows, faqSchema } from "@/components/blocks";
 import { ArrowIcon } from "@/components/icons";
 import { FAQS, POSTS, TEAM } from "@/lib/content";
 import { SITE } from "@/lib/site";
@@ -86,13 +86,22 @@ export default function Home() {
               <p className="eyebrow">Services</p>
               <h2 id="svc-h" className="h2">Funeral, cremation &amp; burial services <em>in North Miami Beach.</em></h2>
             </div>
-            <div style={{ display: "grid", gap: 4, textAlign: "right" }}>
-              <span className="price">Direct cremation from $1,595</span>
-              <span className="price">Funeral with cremation from $4,995</span>
-              <span className="price">Burial from $5,995</span>
-            </div>
+
           </div>
           <ServiceRows />
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="section" aria-labelledby="price-h" id="pricing">
+        <div className="wrap" style={{ display: "grid", gap: 64 }}>
+          <div className="reveal" style={{ display: "grid", gap: 18, maxWidth: 760 }}>
+            <p className="eyebrow">Transparent pricing</p>
+            <h2 id="price-h" className="h2">Clear prices. <em>No surprises.</em></h2>
+            <p className="lede">Every funeral home must give you a written price list. We go further and share our starting prices here, so you know where you stand before you call.</p>
+          </div>
+          <PricingCards />
+          <div style={{ textAlign: "center" }}><Link className="link" href="/pricing">See full pricing &amp; what&rsquo;s included</Link></div>
         </div>
       </section>
 

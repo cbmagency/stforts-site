@@ -300,3 +300,24 @@ em, .serif { font-family: var(--serif); font-style: italic; font-weight: 400; le
 .sticky-bar { bottom: calc(12px + env(safe-area-inset-bottom, 0px)); }
 @media (max-width: 640px) { .hero .hero-meta { display: flex; margin-top: 18px; } .hero .hero-meta > span { display: none; } }
 .hero-meta a span::before { display: none; }
+
+/* Pricing */
+.pkgs { display: grid; gap: 20px; }
+@media (min-width: 960px) { .pkgs { grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; } }
+.pkg { position: relative; display: flex; flex-direction: column; gap: 14px; padding: 40px 30px 32px; border: 1px solid var(--line); background: var(--ink-2); border-radius: 2px; }
+.pkg.featured { border-color: var(--champagne); background: linear-gradient(180deg, rgba(201,174,130,.10), rgba(201,174,130,.02) 60%), var(--ink-2); }
+.pkg-badge { position: absolute; top: -12px; left: 30px; padding: 4px 12px; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; background: var(--ink); border: 1px solid var(--line); color: var(--champagne); border-radius: 999px; }
+.pkg.featured .pkg-badge { background: var(--champagne); color: var(--ink); border-color: var(--champagne); }
+.pkg-name { font-size: 26px; font-weight: 300; }
+.pkg-price { display: grid; gap: 2px; font-family: var(--serif); font-style: italic; font-size: 56px; line-height: 1; color: var(--ivory); }
+.pkg-price span { font-family: var(--sans); font-style: normal; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--ivory-dim); }
+.pkg-sum { font-size: 15px; }
+.pkg-list { list-style: none; margin: 4px 0 8px; padding: 18px 0 0; border-top: 1px solid var(--line); display: grid; gap: 10px; font-size: 15px; flex: 1; }
+.pkg-list li { padding-left: 24px; position: relative; color: var(--ivory); }
+.pkg-list li::before { content: ""; position: absolute; left: 2px; top: .55em; width: 10px; height: 5px; border-left: 1.5px solid var(--champagne); border-bottom: 1.5px solid var(--champagne); transform: rotate(-45deg); }
+.pkg .btn { align-self: stretch; }
+.extras { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+@media (min-width: 900px) { .extras { grid-template-columns: repeat(3, 1fr); } }
+.extra { background: var(--ink); padding: 28px; }
+/* Mobile menu call button: keep button colors */
+.mobile-nav a.btn { font-size: 16px; font-weight: 400; color: var(--ink); border-bottom: 0; padding: 0 28px; }
