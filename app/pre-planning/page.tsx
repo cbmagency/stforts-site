@@ -3,12 +3,14 @@ import { Faq, JsonLd, PageHero, crumbs, faqSchema } from "@/components/blocks";
 import { LeadForm } from "@/components/client";
 
 export const metadata: Metadata = {
-  title: "Funeral Pre-Planning in North Miami Beach & Miami | St. Fort's Funeral Home",
-  description: "Plan your funeral or cremation ahead of time with St. Fort's in North Miami Beach. Put your wishes in writing and spare your family hard decisions. Private, no-pressure consultations.",
-  alternates: { canonical: "/planning-ahead" },
+  title: "Funeral Pre-Planning in North Miami Beach | Pre-Arrange a Funeral or Cremation | St. Fort's",
+  description: "Funeral pre-planning in North Miami Beach. Pre-arrange a funeral or cremation, put your wishes in writing, and lock in today's choices. Free, private, no-pressure consultations with St. Fort's.",
+  alternates: { canonical: "/pre-planning" },
 };
 
 const FAQ = [
+  { q: "What is funeral pre-planning?", a: "Funeral pre-planning (also called pre-arranging or a pre-need plan) means choosing your funeral or cremation wishes ahead of time and putting them in writing with a funeral home, so your family doesn't have to make those decisions later." },
+  { q: "How much does it cost to pre-plan a funeral?", a: "There is no cost to plan. Meeting with us and recording your wishes is free. If you choose to pre-pay, we'll walk you through our prices and payment options with no pressure." },
   { q: "Why plan a funeral ahead of time?", a: "Planning ahead means your wishes are known and your family doesn't have to guess or make rushed decisions during a hard time. Many families also choose to pay in advance so the cost is settled." },
   { q: "Do I have to pay upfront?", a: "No. You can simply record your wishes, or explore payment options. We'll explain everything clearly, with no pressure." },
   { q: "Can I change my plan later?", a: "Life changes, and plans can too. Talk to us about your plan whenever you need to." },
@@ -19,9 +21,9 @@ export default function PlanningAhead() {
   return (
     <>
       <PageHero
-        eyebrow="Planning ahead"
-        title={<>The kindest gift <em>you can leave your family.</em></>}
-        intro="A private, unhurried conversation today means your loved ones won't have to guess, rush or worry later. Your wishes, in writing, handled with care."
+        eyebrow="Funeral pre-planning · North Miami Beach"
+        title={<>Funeral pre-planning: <em>the kindest gift you can leave your family.</em></>}
+        intro="Pre-arrange your funeral or cremation in one private, unhurried conversation. Your wishes go in writing, so your loved ones never have to guess, rush or worry later. Planning is free."
         image="/images/planning.jpg"
         imageAlt="A cream notebook and fountain pen beside white orchids"
       />
@@ -29,7 +31,7 @@ export default function PlanningAhead() {
         <div className="wrap split" style={{ alignItems: "start" }}>
           <div className="reveal" style={{ display: "grid", gap: 28 }}>
             <p className="eyebrow">How it works</p>
-            <h2 className="h2">Simple, private, <em>no pressure.</em></h2>
+            <h2 className="h2">How funeral pre-planning <em>works.</em></h2>
             <div className="points" style={{ gridTemplateColumns: "1fr" }}>
               {[
                 ["1. Request a consultation", "Tell us a good time. We'll reach out in the way you prefer."],
@@ -43,15 +45,15 @@ export default function PlanningAhead() {
             </div>
           </div>
           <div className="card reveal" style={{ background: "var(--ink)" }} id="consult">
-            <p className="h3">Request a private consultation</p>
+            <p className="h3">Request a free pre-planning consultation</p>
             <p style={{ margin: "8px 0 28px" }}>In person, by phone or by video.</p>
-            <LeadForm variant="planning" source="planning-ahead" />
+            <LeadForm variant="planning" source="pre-planning" />
           </div>
         </div>
       </section>
-      <Faq faqs={FAQ} title="Planning ahead: common questions" />
+      <Faq faqs={FAQ} title="Funeral pre-planning questions" />
       <JsonLd data={faqSchema(FAQ)} />
-      <JsonLd data={crumbs([{ name: "Home", path: "/" }, { name: "Planning Ahead", path: "/planning-ahead" }])} />
+      <JsonLd data={crumbs([{ name: "Home", path: "/" }, { name: "Pre-Planning", path: "/pre-planning" }])} />
     </>
   );
 }

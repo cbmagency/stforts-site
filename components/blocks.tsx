@@ -81,11 +81,11 @@ export function Paths() {
         <span className="path-b">A funeral director answers day and night. We&rsquo;ll tell you exactly what happens next — and take it from there.</span>
         <span className="path-cta"><PhoneIcon /> Call {SITE.phone}</span>
       </a>
-      <Link className="path" href="/planning-ahead">
+      <Link className="path" href="/pre-planning">
         <span className="path-k">For the future</span>
-        <span className="path-t">I&rsquo;m planning ahead</span>
-        <span className="path-b">Put your wishes in writing, lock in today&rsquo;s choices, and spare your family hard decisions later.</span>
-        <span className="path-cta">Request a private consultation <ArrowIcon /></span>
+        <span className="path-t">I&rsquo;m pre-planning</span>
+        <span className="path-b">Pre-arrange a funeral or cremation, put your wishes in writing, and spare your family hard decisions later. Planning is free.</span>
+        <span className="path-cta">Request a free pre-planning consultation <ArrowIcon /></span>
       </Link>
     </div>
   );
@@ -198,7 +198,7 @@ export function Footer() {
             <ul>
               <li><Link href="/immediate-need">Immediate need</Link></li>
               <li><Link href="/pricing">Pricing</Link></li>
-              <li><Link href="/planning-ahead">Planning ahead</Link></li>
+              <li><Link href="/pre-planning">Pre-planning</Link></li>
               <li><Link href="/our-founder">Our founder</Link></li>
               <li><Link href="/our-team">Our team</Link></li>
               <li><Link href="/insights">Insights</Link></li>

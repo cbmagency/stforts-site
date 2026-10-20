@@ -13,6 +13,8 @@ export const metadata: Metadata = {
 
 // TODO(client): Evans to confirm the Lynn University degree, the 2010 Haiti story, and the dedication month.
 const TIMELINE = [
+  // TODO(client): father's name and the year he began (main site says "since 1980").
+  { yr: "The beginning", t: "Where it started: Haiti", b: "Long before North Miami Beach, Evans's father was caring for grieving families in Haiti. He taught his son that this work is a calling, and that every family deserves dignity." },
   { yr: "2003", t: "A funeral home of his own, at 25", b: "After earning his degree in mortuary science, Evans opened St. Fort's in North Miami Beach. His goal was simple: care for families the way he'd want his own cared for." },
   { yr: "2010", t: "Standing with Haiti", b: "When the earthquake struck Haiti, St. Fort's helped grieving families at no cost. Today the family also operates chapels in Haiti." },
   { yr: "2019", t: "Recognized during Black Business Month", b: "Florida State Representative Barbara Watson honored Evans with a proclamation for his service to South Florida families." },
@@ -61,7 +63,7 @@ export default function Founder() {
             </div>
             <div style={{ display: "grid", gap: 14, marginTop: 28 }}>
               <p className="eyebrow">The St. Fort story</p>
-              <h2 id="story-h" className="h2">Two decades <em>in North Miami Beach.</em></h2>
+              <h2 id="story-h" className="h2">Two generations, <em>one family legacy.</em></h2>
             </div>
           </div>
           <ol className="founder-timeline">

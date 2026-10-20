@@ -34,7 +34,7 @@ export const NAV = [
   { label: "Immediate Need", href: "/immediate-need" },
   { label: "Services", href: "/services" },
   { label: "Pricing", href: "/pricing" },
-  { label: "Planning Ahead", href: "/planning-ahead" },
+  { label: "Pre-Planning", href: "/pre-planning" },
   { label: "Our Team", href: "/our-team" },
   { label: "Insights", href: "/insights" },
   { label: "Contact", href: "/contact" },

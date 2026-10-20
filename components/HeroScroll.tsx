@@ -117,7 +117,7 @@ export default function HeroScroll() {
             <h1 className="hero-h1">Funeral &amp; Cremation Services in North Miami Beach</h1>
             <div className="hero-actions">
               <a href={SITE.phoneHref} className="btn btn-light" data-track="hero"><PhoneIcon /> Speak with a funeral director</a>
-              <a href="/planning-ahead" className="btn btn-ghost">Plan ahead</a>
+              <a href="/pre-planning" className="btn btn-ghost">Pre-plan a funeral</a>
             </div>
             <div className="hero-meta">
               <a href={SITE.googleReviewsHref} target="_blank" rel="noopener noreferrer" style={{ color: "var(--ivory)" }}><span>★ {SITE.rating.stars} · {SITE.rating.count} Google reviews</span></a><span>Family-owned</span><span>Open 24/7</span><span>English · Español · Kreyòl</span><span>Serving Miami-Dade &amp; Broward</span>

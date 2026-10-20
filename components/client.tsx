@@ -176,14 +176,15 @@ export function Concierge() {
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start", gap: 16 }}>
             <div>
               <p className="eyebrow">We&rsquo;re here, day or night</p>
-              <p className="h3" style={{ marginTop: 10 }}>How can we help?</p>
+              <p className="h3" style={{ marginTop: 10 }}>How can we help you today?</p>
             </div>
             <button aria-label="Close" onClick={() => setOpen(false)} style={{ width: 32, height: 32, color: "var(--ivory)" }}><CloseIcon /></button>
           </div>
           <div className="opts" data-track="concierge">
-            <a className="opt" href={SITE.phoneHref}><span>Someone has passed<small>Speak with a funeral director now</small></span><PhoneIcon className="w4" /></a>
+            <a className="opt" href={SITE.phoneHref}><span>I need help now<small>Speak with a funeral director, 24/7</small></span><PhoneIcon className="w4" /></a>
+            <a className="opt" href="/pre-planning#consult"><span>Pre-plan a funeral<small>Free, private consultation</small></span><ArrowIcon className="w4" /></a>
+            <a className="opt" href="/pricing"><span>See our prices<small>Cremation from $1,595</small></span><ArrowIcon className="w4" /></a>
             <a className="opt" href={SITE.whatsappHref} target="_blank" rel="noopener noreferrer"><span>Message us on WhatsApp<small>English · Español · Kreyòl</small></span><ChatIcon className="w4" /></a>
-            <a className="opt" href="/contact#callback"><span>Request a callback<small>We&rsquo;ll call you at a good time</small></span><ArrowIcon className="w4" /></a>
           </div>
         </div>
       )}

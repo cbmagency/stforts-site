@@ -124,9 +124,9 @@ export default function Home() {
           </div>
           <div className="reveal" style={{ display: "grid", gap: 26 }}>
             <p className="eyebrow">St. Fort Drive · North Miami Beach</p>
-            <h2 id="drive-h" className="h2">Twenty years of service. <em>One street name.</em></h2>
+            <h2 id="drive-h" className="h2">Two generations of service. <em>One street name.</em></h2>
             <p className="lede">
-              The City of North Miami Beach renamed a stretch of NE 165th Street &ldquo;St. Fort Drive&rdquo; in honor of the St. Fort family and their years of caring for this community. Our funeral home sits right beneath that sign.
+              The City of North Miami Beach renamed a stretch of NE 165th Street &ldquo;St. Fort Drive&rdquo; in honor of the St. Fort family, two generations of funeral service, from Haiti to North Miami Beach. Our funeral home sits right beneath that sign.
             </p>
             <Link className="link" href="/our-founder" style={{ justifySelf: "start" }}>Meet our founder, Evans St. Fort</Link>
           </div>
