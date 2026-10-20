@@ -50,12 +50,15 @@ export default function Home() {
       {/* Philosophy — stone */}
       <section className="section stone" aria-labelledby="phil-h">
         <div className="wrap split">
-          <div className="frame reveal" style={{ aspectRatio: "4/5" }}>
-            <img src="/images/hands.jpg" alt="Two hands gently holding each other in warm light" loading="lazy" />
-          </div>
+          <figure className="reveal" style={{ margin: 0, display: "grid", gap: 14 }}>
+            <div className="frame" style={{ aspectRatio: "400/416", maxWidth: 520 }}>
+              <img src="/images/st-fort-family.jpg" alt="The St. Fort family, owners of St. Fort's Funeral Home & Cremation in North Miami Beach" loading="lazy" />
+            </div>
+            <figcaption className="muted">The St. Fort family</figcaption>
+          </figure>
           <div className="reveal" style={{ display: "grid", gap: 28 }}>
             <p className="eyebrow">A family-owned funeral home in North Miami Beach</p>
-            <h2 id="phil-h" className="h2">Not a transaction. <em>A family taking care of yours.</em></h2>
+            <h2 id="phil-h" className="h2">A family <em>taking care of yours.</em></h2>
             <p className="lede">
               St. Fort&rsquo;s is a family-owned, independent funeral home in North Miami Beach, and it shows in the details. You&rsquo;ll speak with people who know your name, explain every choice in plain words, and honor your traditions — Haitian, Caribbean, Latin, and every faith in between.
             </p>
@@ -104,56 +107,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Founder — sticky portrait while the story scrolls */}
-      <section className="section" aria-labelledby="founder-h">
-        <div className="wrap founder">
-          <div className="founder-stick">
-            <div className="frame" style={{ aspectRatio: "3/4", maxWidth: 380 }}>
-              <img src="/team/evans.jpg" alt="Evans St. Fort, founder and CEO of St. Fort's Funeral Home & Cremation" loading="lazy" />
-            </div>
-            <div style={{ display: "grid", gap: 14, marginTop: 28 }}>
-              <p className="eyebrow">Our founder</p>
-              <h2 id="founder-h" className="h2">Evans St. Fort</h2>
-              <p className="lede" style={{ fontSize: 18 }}>
-                Miami-born, Haitian-American, licensed funeral director — and the reason St. Fort&rsquo;s still feels like family.
-              </p>
-            </div>
+      {/* St. Fort Drive */}
+      <section className="section" aria-labelledby="drive-h">
+        <div className="wrap split flip">
+          <div className="frame reveal" style={{ aspectRatio: "1/1" }}>
+            <img src="/images/st-fort-drive.jpg" alt="The St. Fort Drive street sign on NE 165th Street above St. Fort's Funeral Home in North Miami Beach" loading="lazy" />
           </div>
-          {/* TODO(client): Evans to confirm Lynn University, the 2010 Haiti story, and the dedication month */}
-          <ol className="founder-timeline">
-            <li className="reveal">
-              <span className="yr">2003</span>
-              <h3 className="h3">A funeral home of his own, at 25</h3>
-              <p>After earning his degree in mortuary science, Evans opened St. Fort&rsquo;s in North Miami Beach. His goal was simple: care for families the way he&rsquo;d want his own cared for.</p>
-            </li>
-            <li className="reveal">
-              <span className="yr">2010</span>
-              <h3 className="h3">Standing with Haiti</h3>
-              <p>When the earthquake struck Haiti, St. Fort&rsquo;s helped grieving families at no cost. Today the family also operates chapels in Haiti.</p>
-            </li>
-            <li className="reveal">
-              <span className="yr">2019</span>
-              <h3 className="h3">Recognized during Black Business Month</h3>
-              <p>Florida State Representative Barbara Watson honored Evans with a proclamation for his service to South Florida families.</p>
-            </li>
-            <li className="reveal">
-              <span className="yr">2023</span>
-              <h3 className="h3">A Top Workplace</h3>
-              <p>St. Fort&rsquo;s was named one of the Top Workplaces — because families feel it when a team loves where it works.</p>
-            </li>
-            <li className="reveal">
-              <span className="yr">2025</span>
-              <h3 className="h3">St. Fort Drive</h3>
-              <p>The City of North Miami Beach renamed a stretch of NE 165th Street &ldquo;St. Fort Drive&rdquo; in honor of the St. Fort family and their years of service to this community.</p>
-              <div className="placeholder" style={{ minHeight: 200, marginTop: 20 }}>St. Fort Drive sign photo — awaiting client</div>
-            </li>
-            <li className="reveal">
-              <span className="yr">Today</span>
-              <h3 className="h3">Still family-owned. Still independent.</h3>
-              <p>No corporate owner, no call center. When you call St. Fort&rsquo;s, you reach the family and the team Evans built.</p>
-              <Link className="link" href="/our-team" style={{ display: "inline-block", marginTop: 16 }}>Meet the team</Link>
-            </li>
-          </ol>
+          <div className="reveal" style={{ display: "grid", gap: 26 }}>
+            <p className="eyebrow">St. Fort Drive · North Miami Beach</p>
+            <h2 id="drive-h" className="h2">A family name, <em>on the street sign.</em></h2>
+            <p className="lede">
+              The City of North Miami Beach renamed a stretch of NE 165th Street &ldquo;St. Fort Drive&rdquo; in honor of the St. Fort family and their years of caring for this community. Our funeral home sits right beneath that sign.
+            </p>
+            <Link className="link" href="/our-founder" style={{ justifySelf: "start" }}>Meet our founder, Evans St. Fort</Link>
+          </div>
         </div>
       </section>
 

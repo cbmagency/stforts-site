@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { ClosingCta, JsonLd, crumbs } from "@/components/blocks";
 import { TEAM } from "@/lib/content";
@@ -27,9 +28,8 @@ export default function Team() {
           <div className="reveal" style={{ display: "grid", gap: 20 }}>
             <p className="eyebrow">{evans.title}</p>
             <h2 className="h2">{evans.name}</h2>
-            {/* TODO(client): Evans to confirm Lynn University and the 2010 Haiti details */}
-            <p className="lede">Evans St. Fort is a Miami-born, Haitian-American licensed funeral director. He earned his degree in mortuary science and founded St. Fort&rsquo;s Funeral Home &amp; Cremation in North Miami Beach in 2003, at 25.</p>
-            <p>Under his leadership, St. Fort&rsquo;s has stayed family-owned and independent, serving families across Miami-Dade and Broward with care rooted in faith and culture. After the 2010 earthquake in Haiti, St. Fort&rsquo;s helped grieving families at no cost. In 2025, the City of North Miami Beach renamed a stretch of NE 165th Street &ldquo;St. Fort Drive&rdquo; in honor of the family.</p>
+            <p className="lede">Evans St. Fort is a Miami-born, Haitian-American licensed funeral director. He founded St. Fort&rsquo;s Funeral Home &amp; Cremation in North Miami Beach in 2003, at 25.</p>
+            <Link className="link" href="/our-founder" style={{ justifySelf: "start" }}>Read Evans&rsquo;s story</Link>
           </div>
         </div>
       </section>
