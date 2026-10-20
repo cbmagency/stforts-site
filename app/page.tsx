@@ -124,7 +124,7 @@ export default function Home() {
           </div>
           <div className="reveal" style={{ display: "grid", gap: 26 }}>
             <p className="eyebrow">St. Fort Drive · North Miami Beach</p>
-            <h2 id="drive-h" className="h2">A family name, <em>on the street sign.</em></h2>
+            <h2 id="drive-h" className="h2">Twenty years of service. <em>One street name.</em></h2>
             <p className="lede">
               The City of North Miami Beach renamed a stretch of NE 165th Street &ldquo;St. Fort Drive&rdquo; in honor of the St. Fort family and their years of caring for this community. Our funeral home sits right beneath that sign.
             </p>

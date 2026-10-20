@@ -331,3 +331,9 @@ em, .serif { font-family: var(--serif); font-style: italic; font-weight: 400; le
 .review-stars { color: var(--champagne); letter-spacing: .2em; font-size: 14px; }
 .review blockquote { margin: 0; flex: 1; font-family: var(--serif); font-style: italic; font-size: 22px; line-height: 1.4; color: var(--ivory); }
 .review figcaption { font-size: 14px; }
+
+/* Accent words: same font, champagne color (italic serif kept only in the hero) */
+h1, h2, .h2, .display { text-wrap: balance; }
+h1 em, h2 em, .display em, .path-t em { font-family: var(--sans); font-style: normal; font-weight: inherit; letter-spacing: inherit; color: var(--champagne); }
+.stone h1 em, .stone h2 em, .stone .display em { color: var(--champagne-deep); }
+.hero .display em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: -0.01em; color: inherit; }
