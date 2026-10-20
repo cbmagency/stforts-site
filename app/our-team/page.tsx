@@ -15,7 +15,7 @@ export default function Team() {
       <section className="page-hero">
         <div className="wrap" style={{ display: "grid", gap: 26, maxWidth: 980 }}>
           <p className="eyebrow">Our team</p>
-          <h1 className="display">The people who will <em>care for your family.</em></h1>
+          <h1 className="display">Our funeral directors <em>in North Miami Beach.</em></h1>
           <p className="lede">A family-owned funeral home means you&rsquo;re cared for by people who treat this work as a calling — and treat your family like their own.</p>
         </div>
       </section>
@@ -27,8 +27,9 @@ export default function Team() {
           <div className="reveal" style={{ display: "grid", gap: 20 }}>
             <p className="eyebrow">{evans.title}</p>
             <h2 className="h2">{evans.name}</h2>
-            {/* TODO(client): bio from Evans */}
-            <p className="lede">Evans leads St. Fort&rsquo;s with a simple belief: every family deserves to be cared for personally. [Full bio pending client approval.]</p>
+            {/* TODO(client): Evans to confirm Lynn University and the 2010 Haiti details */}
+            <p className="lede">Evans St. Fort is a Miami-born, Haitian-American licensed funeral director. He earned his degree in mortuary science and founded St. Fort&rsquo;s Funeral Home &amp; Cremation in North Miami Beach in 2003, at 25.</p>
+            <p>Under his leadership, St. Fort&rsquo;s has stayed family-owned and independent, serving families across Miami-Dade and Broward with care rooted in faith and culture. After the 2010 earthquake in Haiti, St. Fort&rsquo;s helped grieving families at no cost. In 2025, the City of North Miami Beach renamed a stretch of NE 165th Street &ldquo;St. Fort Drive&rdquo; in honor of the family.</p>
           </div>
         </div>
       </section>

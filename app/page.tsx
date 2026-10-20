@@ -30,6 +30,23 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Location — North Miami Beach emphasis */}
+      <section className="section tight" aria-labelledby="loc-h" style={{ paddingTop: 0 }}>
+        <div className="wrap loc-band reveal" data-track="location_band">
+          <div style={{ display: "grid", gap: 14 }}>
+            <p className="eyebrow">Based in North Miami Beach</p>
+            <h2 id="loc-h" className="h3" style={{ fontSize: "clamp(24px, 2.6vw, 34px)", fontWeight: 250 }}>
+              Your funeral home in North Miami Beach, on NE 19th Avenue — minutes from North Miami, Aventura and Miami Gardens.
+            </h2>
+          </div>
+          <div style={{ display: "grid", gap: 8, alignContent: "end" }}>
+            <p style={{ color: "var(--ivory)" }}>{SITE.address.full}</p>
+            <p className="muted">Open 24 hours · English, Español, Kreyòl</p>
+            <a className="link" href={SITE.directionsHref} target="_blank" rel="noopener noreferrer" style={{ justifySelf: "start" }}>Get directions</a>
+          </div>
+        </div>
+      </section>
+
       {/* Philosophy — stone */}
       <section className="section stone" aria-labelledby="phil-h">
         <div className="wrap split">
@@ -37,10 +54,10 @@ export default function Home() {
             <img src="/images/hands.jpg" alt="Two hands gently holding each other in warm light" loading="lazy" />
           </div>
           <div className="reveal" style={{ display: "grid", gap: 28 }}>
-            <p className="eyebrow">The St. Fort&rsquo;s way</p>
+            <p className="eyebrow">A family-owned funeral home in North Miami Beach</p>
             <h2 id="phil-h" className="h2">Not a transaction. <em>A family taking care of yours.</em></h2>
             <p className="lede">
-              We&rsquo;re a family-owned funeral home, and it shows in the details. You&rsquo;ll speak with people who know your name, explain every choice in plain words, and honor your traditions — Haitian, Caribbean, Latin, and every faith in between.
+              St. Fort&rsquo;s is a family-owned, independent funeral home in North Miami Beach, and it shows in the details. You&rsquo;ll speak with people who know your name, explain every choice in plain words, and honor your traditions — Haitian, Caribbean, Latin, and every faith in between.
             </p>
             <div className="points stack" style={{ marginTop: 12 }}>
               {[
@@ -64,7 +81,7 @@ export default function Home() {
           <div className="reveal" style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "end", gap: 24 }}>
             <div style={{ display: "grid", gap: 18, maxWidth: 680 }}>
               <p className="eyebrow">Services</p>
-              <h2 id="svc-h" className="h2">Thoughtful options <em>for every family.</em></h2>
+              <h2 id="svc-h" className="h2">Funeral, cremation &amp; burial services <em>in North Miami Beach.</em></h2>
             </div>
             <div style={{ display: "grid", gap: 4, textAlign: "right" }}>
               <span className="price">Direct cremation from $1,595</span>
@@ -87,20 +104,56 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Legacy */}
-      <section className="section" aria-labelledby="legacy-h">
-        <div className="wrap split flip">
-          {/* TODO(client): St. Fort Drive dedication photo */}
-          <div className="placeholder reveal" style={{ aspectRatio: "4/5" }}>St. Fort Drive street dedication photo — awaiting client</div>
-          <div className="reveal" style={{ display: "grid", gap: 26 }}>
-            <p className="eyebrow">Our legacy</p>
-            <h2 id="legacy-h" className="h2">A family name, <em>honored by its city.</em></h2>
-            <p className="lede">
-              {/* TODO(client): confirm dedication details and founding year with Evans */}
-              North Miami Beach honored the St. Fort family with a street in their name — a reflection of years spent caring for this community, one family at a time.
-            </p>
-            <Link className="link" href="/our-team" style={{ justifySelf: "start" }}>Meet the family behind St. Fort&rsquo;s</Link>
+      {/* Founder — sticky portrait while the story scrolls */}
+      <section className="section" aria-labelledby="founder-h">
+        <div className="wrap founder">
+          <div className="founder-stick">
+            <div className="frame" style={{ aspectRatio: "3/4", maxWidth: 380 }}>
+              <img src="/team/evans.jpg" alt="Evans St. Fort, founder and CEO of St. Fort's Funeral Home & Cremation" loading="lazy" />
+            </div>
+            <div style={{ display: "grid", gap: 14, marginTop: 28 }}>
+              <p className="eyebrow">Our founder</p>
+              <h2 id="founder-h" className="h2">Evans St. Fort</h2>
+              <p className="lede" style={{ fontSize: 18 }}>
+                Miami-born, Haitian-American, licensed funeral director — and the reason St. Fort&rsquo;s still feels like family.
+              </p>
+            </div>
           </div>
+          {/* TODO(client): Evans to confirm Lynn University, the 2010 Haiti story, and the dedication month */}
+          <ol className="founder-timeline">
+            <li className="reveal">
+              <span className="yr">2003</span>
+              <h3 className="h3">A funeral home of his own, at 25</h3>
+              <p>After earning his degree in mortuary science, Evans opened St. Fort&rsquo;s in North Miami Beach. His goal was simple: care for families the way he&rsquo;d want his own cared for.</p>
+            </li>
+            <li className="reveal">
+              <span className="yr">2010</span>
+              <h3 className="h3">Standing with Haiti</h3>
+              <p>When the earthquake struck Haiti, St. Fort&rsquo;s helped grieving families at no cost. Today the family also operates chapels in Haiti.</p>
+            </li>
+            <li className="reveal">
+              <span className="yr">2019</span>
+              <h3 className="h3">Recognized during Black Business Month</h3>
+              <p>Florida State Representative Barbara Watson honored Evans with a proclamation for his service to South Florida families.</p>
+            </li>
+            <li className="reveal">
+              <span className="yr">2023</span>
+              <h3 className="h3">A Top Workplace</h3>
+              <p>St. Fort&rsquo;s was named one of the Top Workplaces — because families feel it when a team loves where it works.</p>
+            </li>
+            <li className="reveal">
+              <span className="yr">2025</span>
+              <h3 className="h3">St. Fort Drive</h3>
+              <p>The City of North Miami Beach renamed a stretch of NE 165th Street &ldquo;St. Fort Drive&rdquo; in honor of the St. Fort family and their years of service to this community.</p>
+              <div className="placeholder" style={{ minHeight: 200, marginTop: 20 }}>St. Fort Drive sign photo — awaiting client</div>
+            </li>
+            <li className="reveal">
+              <span className="yr">Today</span>
+              <h3 className="h3">Still family-owned. Still independent.</h3>
+              <p>No corporate owner, no call center. When you call St. Fort&rsquo;s, you reach the family and the team Evans built.</p>
+              <Link className="link" href="/our-team" style={{ display: "inline-block", marginTop: 16 }}>Meet the team</Link>
+            </li>
+          </ol>
         </div>
       </section>
 
@@ -110,7 +163,7 @@ export default function Home() {
           <div className="reveal" style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "end", gap: 24 }}>
             <div style={{ display: "grid", gap: 18 }}>
               <p className="eyebrow">Our team</p>
-              <h2 id="team-h" className="h2">The people who will <em>care for your family.</em></h2>
+              <h2 id="team-h" className="h2">The funeral directors <em>who will care for your family.</em></h2>
             </div>
             <Link href="/our-team" className="btn btn-outline-dark">Meet the full team <ArrowIcon /></Link>
           </div>

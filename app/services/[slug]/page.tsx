@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ClosingCta, Faq, JsonLd, PageHero, ServiceRows, crumbs, faqSchema } from "@/components/blocks";
+import { AreaChips, ClosingCta, Faq, JsonLd, PageHero, ServiceRows, crumbs, faqSchema } from "@/components/blocks";
 import { PhoneIcon } from "@/components/icons";
 import { SERVICES, getService } from "@/lib/services";
 import { SITE } from "@/lib/site";
@@ -66,6 +66,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </div>
       </section>
 
+      <AreaChips stone />
       <ClosingCta />
       <JsonLd data={faqSchema(s.faqs)} />
       <JsonLd data={{ "@context": "https://schema.org", "@type": "Service", serviceType: s.name, provider: { "@id": `${SITE.url}/#funeralhome` }, areaServed: ["Miami-Dade County, FL", "Broward County, FL"], description: s.metaDescription }} />

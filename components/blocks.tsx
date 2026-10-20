@@ -213,6 +213,23 @@ export function Footer() {
             </ul>
           </div>
         </div>
+        <div className="footer-locs">
+          <div>
+            <h4>Service areas</h4>
+            <p className="footer-areas">
+              {AREAS.map((a, i) => (
+                <span key={a.slug}><Link href={`/areas/${a.slug}`}>{a.name}</Link>{i < AREAS.length - 1 ? " · " : ""}</span>
+              ))}
+            </p>
+          </div>
+          <div>
+            <h4>Our other locations</h4>
+            <ul>
+              <li><a href="https://www.stfortsfuneralhomefortpierce.com" target="_blank" rel="noopener noreferrer">St. Fort&rsquo;s Funeral Home of Fort Pierce</a><br /><span className="muted">1800 Okeechobee Rd, Fort Pierce, FL 34950 · (772) 577-6828</span></li>
+              <li><a href="https://www.stfortsfuneralhome.com/locations/" target="_blank" rel="noopener noreferrer">Chapels in Haiti</a><br /><span className="muted">Delmas · Léogâne · and more</span></li>
+            </ul>
+          </div>
+        </div>
         <div className="footer-base">
           <span>© {new Date().getFullYear()} {SITE.name}. All rights reserved.</span>
           <span><a href="https://www.stfortsfuneralhome.com/obituaries/">Obituaries</a> · <a href={SITE.social.facebook}>Facebook</a> · <a href={SITE.social.instagram}>Instagram</a></span>
