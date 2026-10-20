@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import { SiteEffects } from "@/components/client";
 import Concierge from "@/components/Concierge";
-import { Footer, JsonLd, StickyBar, funeralHomeSchema } from "@/components/blocks";
+import { Footer, JsonLd, funeralHomeSchema } from "@/components/blocks";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -36,7 +36,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main id="main">{children}</main>
         <Footer />
-        <StickyBar />
         <Concierge />
         <SiteEffects />
         <JsonLd data={funeralHomeSchema} />
