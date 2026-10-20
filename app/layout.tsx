@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = { themeColor: "#0e0d0b", width: "device-width", initialScale: 1 };
 
 // Tracking IDs carried over from the current planning page.
-// TODO(client): confirm Ads / Pixel / WhatConverts IDs in each platform before launch.
+// TODO(client): confirm Ads / Pixel IDs in each platform before launch. (WhatConverts was canceled and removed.)
 const GA4 = process.env.NEXT_PUBLIC_GA4_ID || "G-XERR37GRYJ";
 const ADS = "AW-942914070";
 const PIXEL = "1793382978708734";
@@ -47,10 +47,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Script id="meta-pixel" strategy="afterInteractive">
           {`!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','${PIXEL}');fbq('track','PageView');`}
         </Script>
-        <Script id="wc-init" strategy="afterInteractive">
-          {`var $wc_load=function(a){return JSON.parse(JSON.stringify(a))},$wc_leads=$wc_leads||{doc:{url:$wc_load(document.URL),ref:$wc_load(document.referrer),search:$wc_load(location.search),hash:$wc_load(location.hash)}};`}
-        </Script>
-        <Script src="https://s.ksrndkehqnwntyxlhgto.com/167317.js" strategy="afterInteractive" />
       </body>
     </html>
   );
