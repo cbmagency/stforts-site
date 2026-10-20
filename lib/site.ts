@@ -20,8 +20,9 @@ export const SITE = {
   },
   directionsHref:
     "https://www.google.com/maps/dir/?api=1&destination=16480+NE+19th+Avenue%2C+North+Miami+Beach%2C+FL+33162",
-  // TODO(client): replace with the North Miami Beach Google Business Profile review link.
-  googleReviewsHref: "https://www.google.com/maps/search/?api=1&query=St.+Fort%27s+Funeral+Home+North+Miami+Beach",
+  // North Miami Beach Google Business Profile. Update the count every month or so.
+  googleReviewsHref: "https://share.google/qiu0tztppdD1qkjoF",
+  rating: { stars: "4.6", count: "289" },
   languages: ["English", "Spanish", "Haitian Creole"],
   social: {
     facebook: "https://www.facebook.com/stforts",

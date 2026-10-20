@@ -291,3 +291,12 @@ em, .serif { font-family: var(--serif); font-style: italic; font-weight: 400; le
 .footer-locs { display: grid; gap: 40px; margin-top: 64px; padding-top: 40px; border-top: 1px solid var(--line); }
 @media (min-width: 900px) { .footer-locs { grid-template-columns: 1.6fr 1fr; gap: 80px; } }
 .footer-areas { line-height: 2; }
+/* Concierge on phones: sits above the sticky Call/WhatsApp bar */
+@media (max-width: 899px) {
+  .concierge-btn { display: inline-flex; right: 12px; bottom: calc(78px + env(safe-area-inset-bottom, 0px)); height: 48px; padding: 0 16px 0 6px; gap: 10px; font-size: 13px; }
+  .concierge-btn .orb { width: 36px; height: 36px; }
+  .concierge-panel { right: 12px; bottom: calc(138px + env(safe-area-inset-bottom, 0px)); }
+}
+.sticky-bar { bottom: calc(12px + env(safe-area-inset-bottom, 0px)); }
+@media (max-width: 640px) { .hero .hero-meta { display: flex; margin-top: 18px; } .hero .hero-meta > span { display: none; } }
+.hero-meta a span::before { display: none; }

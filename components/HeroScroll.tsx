@@ -120,7 +120,7 @@ export default function HeroScroll() {
               <a href="/planning-ahead" className="btn btn-ghost">Plan ahead</a>
             </div>
             <div className="hero-meta">
-              <span>Family-owned</span><span>Open 24/7</span><span>English · Español · Kreyòl</span><span>Serving Miami-Dade &amp; Broward</span>
+              <a href={SITE.googleReviewsHref} target="_blank" rel="noopener noreferrer" style={{ color: "var(--ivory)" }}><span>★ {SITE.rating.stars} · {SITE.rating.count} Google reviews</span></a><span>Family-owned</span><span>Open 24/7</span><span>English · Español · Kreyòl</span><span>Serving Miami-Dade &amp; Broward</span>
             </div>
           </div>
         </div>
