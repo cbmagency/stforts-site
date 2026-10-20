@@ -1,0 +1,170 @@
+import Link from "next/link";
+import type { Metadata } from "next";
+import HeroScroll from "@/components/HeroScroll";
+import { AreaChips, ClosingCta, Faq, JsonLd, Paths, ServiceRows, faqSchema } from "@/components/blocks";
+import { ArrowIcon } from "@/components/icons";
+import { FAQS, POSTS, TEAM } from "@/lib/content";
+import { SITE } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "Funeral & Cremation Services in North Miami Beach | St. Fort's Funeral Home",
+  description:
+    "St. Fort's is a family-owned funeral home in North Miami Beach offering funerals, cremation from $1,595, burial and pre-planning. Open 24/7. English, Spanish & Haitian Creole.",
+  alternates: { canonical: "/" },
+};
+
+export default function Home() {
+  const lead = TEAM.slice(0, 4);
+  return (
+    <>
+      <HeroScroll />
+
+      {/* Two clear paths */}
+      <section className="section" aria-labelledby="paths-h">
+        <div className="wrap" style={{ display: "grid", gap: 56 }}>
+          <div className="reveal" style={{ display: "grid", gap: 18, maxWidth: 760 }}>
+            <p className="eyebrow">Where would you like to begin?</p>
+            <h2 id="paths-h" className="h2">One call, and we&rsquo;ll take it <em>from here.</em></h2>
+          </div>
+          <Paths />
+        </div>
+      </section>
+
+      {/* Philosophy — stone */}
+      <section className="section stone" aria-labelledby="phil-h">
+        <div className="wrap split">
+          <div className="frame reveal" style={{ aspectRatio: "4/5" }}>
+            <img src="/images/hands.jpg" alt="Two hands gently holding each other in warm light" loading="lazy" />
+          </div>
+          <div className="reveal" style={{ display: "grid", gap: 28 }}>
+            <p className="eyebrow">The St. Fort&rsquo;s way</p>
+            <h2 id="phil-h" className="h2">Not a transaction. <em>A family taking care of yours.</em></h2>
+            <p className="lede">
+              We&rsquo;re a family-owned funeral home, and it shows in the details. You&rsquo;ll speak with people who know your name, explain every choice in plain words, and honor your traditions — Haitian, Caribbean, Latin, and every faith in between.
+            </p>
+            <div className="points stack" style={{ marginTop: 12 }}>
+              {[
+                ["Personal", "One team guides you from the first call to the final goodbye."],
+                ["Transparent", "Clear starting prices. Every cost explained before you decide."],
+                ["Always here", "Day, night, holidays. A real person answers."],
+              ].map(([t, b]) => (
+                <div className="point" key={t}>
+                  <p className="h3">{t}</p>
+                  <p style={{ fontSize: 15 }}>{b}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="section" aria-labelledby="svc-h">
+        <div className="wrap" style={{ display: "grid", gap: 56 }}>
+          <div className="reveal" style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "end", gap: 24 }}>
+            <div style={{ display: "grid", gap: 18, maxWidth: 680 }}>
+              <p className="eyebrow">Services</p>
+              <h2 id="svc-h" className="h2">Thoughtful options <em>for every family.</em></h2>
+            </div>
+            <div style={{ display: "grid", gap: 4, textAlign: "right" }}>
+              <span className="price">Direct cremation from $1,595</span>
+              <span className="price">Funeral with cremation from $4,995</span>
+              <span className="price">Burial from $5,995</span>
+            </div>
+          </div>
+          <ServiceRows />
+        </div>
+      </section>
+
+      {/* Cinematic band */}
+      <section aria-hidden style={{ position: "relative", height: "70vh", minHeight: 420, overflow: "hidden" }}>
+        <img src="/images/candle.jpg" alt="" loading="lazy" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, var(--ink) 0%, rgba(14,13,11,.2) 30%, rgba(14,13,11,.2) 70%, var(--ink) 100%)" }} />
+        <div className="wrap" style={{ position: "relative", height: "100%", display: "flex", alignItems: "center" }}>
+          <p className="display reveal" style={{ color: "var(--ivory)", fontSize: "clamp(36px, 5.6vw, 84px)", maxWidth: "15ch" }}>
+            Every life deserves dignity. <em>Every family deserves care.</em>
+          </p>
+        </div>
+      </section>
+
+      {/* Legacy */}
+      <section className="section" aria-labelledby="legacy-h">
+        <div className="wrap split flip">
+          {/* TODO(client): St. Fort Drive dedication photo */}
+          <div className="placeholder reveal" style={{ aspectRatio: "4/5" }}>St. Fort Drive street dedication photo — awaiting client</div>
+          <div className="reveal" style={{ display: "grid", gap: 26 }}>
+            <p className="eyebrow">Our legacy</p>
+            <h2 id="legacy-h" className="h2">A family name, <em>honored by its city.</em></h2>
+            <p className="lede">
+              {/* TODO(client): confirm dedication details and founding year with Evans */}
+              North Miami Beach honored the St. Fort family with a street in their name — a reflection of years spent caring for this community, one family at a time.
+            </p>
+            <Link className="link" href="/our-team" style={{ justifySelf: "start" }}>Meet the family behind St. Fort&rsquo;s</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Team preview — stone */}
+      <section className="section stone" aria-labelledby="team-h">
+        <div className="wrap" style={{ display: "grid", gap: 56 }}>
+          <div className="reveal" style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "end", gap: 24 }}>
+            <div style={{ display: "grid", gap: 18 }}>
+              <p className="eyebrow">Our team</p>
+              <h2 id="team-h" className="h2">The people who will <em>care for your family.</em></h2>
+            </div>
+            <Link href="/our-team" className="btn btn-outline-dark">Meet the full team <ArrowIcon /></Link>
+          </div>
+          <div className="team-grid">
+            {lead.map((m) => (
+              <div key={m.name} className="team-card reveal">
+                <img src={m.photo} alt={`${m.name}, ${m.title}`} loading="lazy" width={296} height={395} />
+                <p className="team-name" style={{ color: "var(--stone-ink)" }}>{m.name}</p>
+                <p className="team-title">{m.title}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews */}
+      <section className="section tight" aria-labelledby="rev-h">
+        <div className="wrap" style={{ display: "grid", gap: 28, justifyItems: "center", textAlign: "center" }}>
+          <p className="eyebrow reveal">Families we&rsquo;ve served</p>
+          {/* TODO(client): replace with 2–3 verified North Miami Beach Google reviews */}
+          <p id="rev-h" className="display reveal" style={{ fontSize: "clamp(30px, 4vw, 56px)", maxWidth: "20ch" }}>
+            <em>&ldquo;Verified North Miami Beach review goes here.&rdquo;</em>
+          </p>
+          <a className="link reveal" href={SITE.googleReviewsHref} target="_blank" rel="noopener noreferrer">Read our Google reviews</a>
+        </div>
+      </section>
+
+      <AreaChips stone />
+      <Faq faqs={FAQS} />
+
+      {/* Insights */}
+      <section className="section stone" aria-labelledby="ins-h">
+        <div className="wrap" style={{ display: "grid", gap: 56 }}>
+          <div className="reveal" style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "end", gap: 24 }}>
+            <div style={{ display: "grid", gap: 18 }}>
+              <p className="eyebrow">Insights</p>
+              <h2 id="ins-h" className="h2">Gentle guidance <em>for hard days.</em></h2>
+            </div>
+            <Link href="/insights" className="btn btn-outline-dark">All articles <ArrowIcon /></Link>
+          </div>
+          <div className="post-grid">
+            {POSTS.map((p) => (
+              <Link key={p.slug} href={`/insights/${p.slug}`} className="post-card reveal">
+                <div className="frame"><img src={p.image} alt="" loading="lazy" /></div>
+                <h3>{p.title}</h3>
+                <p className="muted" style={{ marginTop: 10 }}>{p.readTime}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <ClosingCta />
+      <JsonLd data={faqSchema(FAQS)} />
+    </>
+  );
+}
