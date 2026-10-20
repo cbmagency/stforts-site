@@ -3,6 +3,7 @@ import { SITE } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
 import { AREAS } from "@/lib/locations";
 import { EXTRAS, PACKAGES, PRICE_NOTE } from "@/lib/pricing";
+import { REVIEWS } from "@/lib/content";
 import { LeadForm } from "./client";
 import { ArrowIcon, ChatIcon, PhoneIcon } from "./icons";
 
@@ -283,5 +284,38 @@ export function PricingCards({ extras = false }: { extras?: boolean }) {
       )}
       <p className="muted reveal" style={{ textAlign: "center", maxWidth: 760, justifySelf: "center" }}>{PRICE_NOTE}</p>
     </div>
+  );
+}
+
+export function Reviews({ limit, compact = false }: { limit?: number; compact?: boolean }) {
+  const list = limit ? REVIEWS.slice(0, limit) : REVIEWS;
+  return (
+    <section className="section" aria-labelledby="rev-h">
+      <div className="wrap" style={{ display: "grid", gap: 48 }}>
+        <div className="reviews-head reveal">
+          <div style={{ display: "grid", gap: 14 }}>
+            <p className="eyebrow">Families we&rsquo;ve served</p>
+            <h2 id="rev-h" className="h2">{compact ? <>What families <em>say about us.</em></> : <>The trust of families <em>in North Miami Beach.</em></>}</h2>
+          </div>
+          <a className="rating" href={SITE.googleReviewsHref} target="_blank" rel="noopener noreferrer" aria-label={`Rated ${SITE.rating.stars} out of 5 from ${SITE.rating.count} Google reviews`}>
+            <span className="serif rating-num">{SITE.rating.stars}</span>
+            <span style={{ display: "grid", gap: 2 }}>
+              <span aria-hidden style={{ color: "var(--champagne)", letterSpacing: ".2em" }}>★★★★★</span>
+              <span className="muted">{SITE.rating.count} Google reviews</span>
+            </span>
+          </a>
+        </div>
+        <div className="reviews-row" tabIndex={0} aria-label="Google reviews">
+          {list.map((r) => (
+            <figure key={r.name} className="review">
+              <span aria-hidden className="review-stars">★★★★★</span>
+              <blockquote>&ldquo;{r.text}&rdquo;</blockquote>
+              <figcaption><span style={{ color: "var(--ivory)" }}>{r.name}</span> · <span className="muted">{r.when}</span></figcaption>
+            </figure>
+          ))}
+        </div>
+        <a className="btn btn-ghost reveal" href={SITE.googleReviewsHref} target="_blank" rel="noopener noreferrer" style={{ justifySelf: "start" }}>Read all {SITE.rating.count} reviews on Google</a>
+      </div>
+    </section>
   );
 }

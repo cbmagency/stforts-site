@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ClosingCta, Faq, JsonLd, PricingCards, crumbs, faqSchema } from "@/components/blocks";
+import { Reviews, ClosingCta, Faq, JsonLd, PricingCards, crumbs, faqSchema } from "@/components/blocks";
 import { PhoneIcon } from "@/components/icons";
 import { PACKAGES } from "@/lib/pricing";
 import { SITE } from "@/lib/site";
@@ -35,6 +35,7 @@ export default function Pricing() {
       <section className="section" style={{ paddingTop: 24 }}>
         <div className="wrap"><PricingCards extras /></div>
       </section>
+      <Reviews limit={4} compact />
       <Faq faqs={FAQ} title="Questions about cost" stone />
       <ClosingCta title={<>Questions about cost? <em>Just ask.</em></>} />
       <JsonLd data={faqSchema(FAQ)} />

@@ -34,7 +34,6 @@ Suggested pipeline: New Inquiry → Contact Attempted → Family Connected → C
 ## Before launch, confirm with Evans
 - [ ] Founder page details: the Lynn University degree, the 2010 Haiti story, and the month of the St. Fort Drive dedication (2003 founding is confirmed on the main site)
 - [ ] Team photo permission, Evans's bio, and titles for Milagros Torres and Nyemah A. The titles for Jeffrey and Gregory were shortened from the main site, so confirm the wording.
-- [ ] 2–3 favorite North Miami Beach review quotes (first name + permission). The rating (4.6 from 289) and review link are set in `lib/site.ts`; update the count periodically.
 - [ ] All FAQ answers (`lib/content.ts`) and the service copy (`lib/services.ts`)
 - [ ] Local details for each city page (cemeteries and churches the team works with): see `lib/locations.ts`
 - [ ] The tracking IDs carried over from the old page (Google Ads `AW-942914070`, Meta Pixel `1793382978708734`, WhatConverts `167317`)

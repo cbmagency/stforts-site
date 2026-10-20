@@ -104,3 +104,13 @@ export const POSTS: Post[] = [
 ];
 
 export const getPost = (slug: string) => POSTS.find((p) => p.slug === slug);
+
+// Public Google reviews from the North Miami Beach profile (4.6★, 289 reviews).
+// Quoted from the visible review text; names shortened to first name + last initial.
+export const REVIEWS = [
+  { name: "Tiffany M.", when: "Google review", text: "Planning our mother's funeral was the most difficult thing we've ever had to do. St. Fort's did a phenomenal job guiding and supporting us through this process and relieving our stress. My mother's send off was absolutely beautiful." },
+  { name: "Natacha P.", when: "Google review", text: "Everyone was amazing. Gregory was amazing and patient with my family. Inside is beautiful. The whole team took good care of us. This is the first time ever planning a funeral. They helped us step by step." },
+  { name: "Valeria", when: "Google review", text: "Among so many funeral homes that charge exorbitant prices, St. Fort's remains true to its purpose: to care for families who have lost their loved ones." },
+  { name: "Sallam S.", when: "Google review", text: "St. Fort's Funeral Home provided exceptional care and service to our family during a very difficult time. The staff was attentive, organized, and genuinely compassionate." },
+  { name: "Linda E.", when: "Google review", text: "All of our needs were met and we are extremely satisfied with the level of professionalism and the overall experience! Thank you Evans!" },
+];

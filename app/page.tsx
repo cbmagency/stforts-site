@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import HeroScroll from "@/components/HeroScroll";
-import { AreaChips, ClosingCta, Faq, JsonLd, Paths, PricingCards, ServiceRows, faqSchema } from "@/components/blocks";
+import { AreaChips, ClosingCta, Faq, JsonLd, Paths, PricingCards, Reviews, ServiceRows, faqSchema } from "@/components/blocks";
 import { ArrowIcon } from "@/components/icons";
 import { FAQS, POSTS, TEAM } from "@/lib/content";
 import { SITE } from "@/lib/site";
@@ -155,19 +155,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Reviews */}
-      <section className="section tight" aria-labelledby="rev-h">
-        <div className="wrap" style={{ display: "grid", gap: 28, justifyItems: "center", textAlign: "center" }}>
-          <p className="eyebrow reveal">Families we&rsquo;ve served</p>
-          <p id="rev-h" className="reveal" style={{ display: "grid", gap: 10, justifyItems: "center" }}>
-            <span className="serif" style={{ fontSize: "clamp(88px, 12vw, 160px)", lineHeight: .9, color: "var(--ivory)" }}>{SITE.rating.stars}</span>
-            <span aria-hidden style={{ color: "var(--champagne)", letterSpacing: ".3em", fontSize: 20 }}>★★★★★</span>
-            <span className="lede" style={{ maxWidth: "none" }}>from {SITE.rating.count} families on Google</span>
-          </p>
-          {/* TODO(client): add 2–3 favorite North Miami Beach review quotes (with first name + permission) */}
-          <a className="btn btn-ghost reveal" href={SITE.googleReviewsHref} target="_blank" rel="noopener noreferrer">Read our Google reviews</a>
-        </div>
-      </section>
+      <Reviews />
 
       <AreaChips stone />
       <Faq faqs={FAQS} />

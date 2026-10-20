@@ -321,3 +321,13 @@ em, .serif { font-family: var(--serif); font-style: italic; font-weight: 400; le
 .extra { background: var(--ink); padding: 28px; }
 /* Mobile menu call button: keep button colors */
 .mobile-nav a.btn { font-size: 16px; font-weight: 400; color: var(--ink); border-bottom: 0; padding: 0 28px; }
+
+/* Reviews */
+.reviews-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 28px; }
+.rating { display: inline-flex; align-items: center; gap: 16px; }
+.rating-num { font-size: 72px; line-height: .9; color: var(--ivory); }
+.reviews-row { display: grid; grid-auto-flow: column; grid-auto-columns: min(86%, 400px); gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 12px; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+.review { scroll-snap-align: start; margin: 0; display: flex; flex-direction: column; gap: 18px; padding: 32px 28px; border: 1px solid var(--line); background: var(--ink-2); border-radius: 2px; }
+.review-stars { color: var(--champagne); letter-spacing: .2em; font-size: 14px; }
+.review blockquote { margin: 0; flex: 1; font-family: var(--serif); font-style: italic; font-size: 22px; line-height: 1.4; color: var(--ivory); }
+.review figcaption { font-size: 14px; }

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ClosingCta, JsonLd, crumbs } from "@/components/blocks";
+import { Reviews, ClosingCta, JsonLd, crumbs } from "@/components/blocks";
 import { ChatIcon, PhoneIcon } from "@/components/icons";
 import { SITE } from "@/lib/site";
 
@@ -65,6 +65,7 @@ export default function ImmediateNeed() {
         </div>
       </section>
 
+      <Reviews limit={4} compact />
       <ClosingCta title={<>One call, and <em>we&rsquo;ll take it from here.</em></>} />
       <JsonLd data={crumbs([{ name: "Home", path: "/" }, { name: "Immediate Need", path: "/immediate-need" }])} />
     </>
