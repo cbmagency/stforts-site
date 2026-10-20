@@ -11,7 +11,7 @@ export const SITE = {
   helpPhone: "(305) 710-7919",
   helpPhoneHref: "tel:+13057107919",
   // GHL booking calendar: "Virtual Pre-Planning Consultation" (Google Meet, Mon–Wed 12–4 ET).
-  bookingHref: process.env.NEXT_PUBLIC_GHL_BOOKING_URL || "",
+  bookingHref: process.env.NEXT_PUBLIC_GHL_BOOKING_URL || "https://api.leadconnectorhq.com/widget/booking/DNL9MOG8ahjsxgW0GSZC",
   mainLine: "(305) 940-1428",
   mainLineHref: "tel:+13059401428",
   whatsappHref:

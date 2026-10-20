@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Faq, JsonLd, PageHero, crumbs, faqSchema } from "@/components/blocks";
 import { LeadForm } from "@/components/client";
 import { SITE } from "@/lib/site";
@@ -61,7 +62,8 @@ export default function PlanningAhead() {
               <p className="lede">Pick a time that works for you. Consultations are by Google Meet, Monday through Wednesday afternoons, and you&rsquo;ll get the link by email.</p>
             </div>
             <div className="card reveal" style={{ padding: 0, overflow: "hidden", background: "#fff" }}>
-              <iframe src={SITE.bookingHref} title="Book a virtual pre-planning consultation" style={{ width: "100%", minHeight: 760, border: 0, display: "block" }} loading="lazy" />
+              <iframe src={SITE.bookingHref} id="DNL9MOG8ahjsxgW0GSZC_booking" title="Book a virtual pre-planning consultation" scrolling="no" style={{ width: "100%", minHeight: 760, border: 0, overflow: "hidden", display: "block" }} />
+              <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="lazyOnload" />
             </div>
           </div>
         </section>
