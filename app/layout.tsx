@@ -2,7 +2,8 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
-import { Concierge, SiteEffects } from "@/components/client";
+import { SiteEffects } from "@/components/client";
+import Concierge from "@/components/Concierge";
 import { Footer, JsonLd, StickyBar, funeralHomeSchema } from "@/components/blocks";
 import { SITE } from "@/lib/site";
 

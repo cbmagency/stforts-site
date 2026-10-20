@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 // All forms post here. Forwards to the St. Fort's GoHighLevel inbound webhook,
 // which stays server-side (GHL_WEBHOOK_URL) and is never sent to the browser.
 const FIELDS = [
-  "name", "phone", "email", "preferred_contact", "preferred_time", "inquiry_type", "source", "page_url",
+  "name", "phone", "email", "notes", "preferred_contact", "preferred_time", "inquiry_type", "source", "page_url",
   "landing_page", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "fbclid",
 ] as const;
 

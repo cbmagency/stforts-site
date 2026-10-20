@@ -2,7 +2,7 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { usePathname } from "next/navigation";
 import { SITE } from "@/lib/site";
-import { ArrowIcon, ChatIcon, CloseIcon, PhoneIcon } from "./icons";
+import { ArrowIcon } from "./icons";
 
 type G = { gtag?: (...a: unknown[]) => void; fbq?: (...a: unknown[]) => void };
 export function track(event: string, params: Record<string, unknown> = {}) {
@@ -180,50 +180,5 @@ function NativeLeadForm({ variant = "callback", source }: { variant?: Variant; s
       </button>
       <p className="form-note">If someone has just passed, calling is fastest: {SITE.phone}. Please don&rsquo;t include medical or financial details.</p>
     </form>
-  );
-}
-
-/**
- * Corner concierge. If a GoHighLevel chat widget id is configured, the GHL
- * widget (with Conversation AI / voice) loads instead — same as CBM's site.
- */
-export function Concierge() {
-  const widgetId = process.env.NEXT_PUBLIC_GHL_WIDGET_ID;
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    if (!widgetId) return;
-    const s = document.createElement("script");
-    s.src = "https://widgets.leadconnectorhq.com/loader.js";
-    s.setAttribute("data-resources-url", "https://widgets.leadconnectorhq.com/chat-widget/loader.js");
-    s.setAttribute("data-widget-id", widgetId);
-    s.async = true;
-    document.body.appendChild(s);
-  }, [widgetId]);
-
-  if (widgetId) return null;
-  return (
-    <>
-      {open && (
-        <div className="concierge-panel" role="dialog" aria-label="Speak with St. Fort's">
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start", gap: 16 }}>
-            <div>
-              <p className="eyebrow">We&rsquo;re here, day or night</p>
-              <p className="h3" style={{ marginTop: 10 }}>How can we help you today?</p>
-            </div>
-            <button aria-label="Close" onClick={() => setOpen(false)} style={{ width: 32, height: 32, color: "var(--ivory)" }}><CloseIcon /></button>
-          </div>
-          <div className="opts" data-track="concierge">
-            <a className="opt" href={SITE.helpPhoneHref}><span>I need help now<small>Speak with a funeral director, 24/7</small></span><PhoneIcon className="w4" /></a>
-            <a className="opt" href={SITE.bookingHref ? "/pre-planning#book" : "/pre-planning#consult"}><span>Pre-plan a funeral<small>{SITE.bookingHref ? "Book a free virtual consultation" : "Free, private consultation"}</small></span><ArrowIcon className="w4" /></a>
-            <a className="opt" href="/pricing"><span>See our prices<small>Cremation from $1,595</small></span><ArrowIcon className="w4" /></a>
-            <a className="opt" href={SITE.whatsappHref} target="_blank" rel="noopener noreferrer"><span>Message us on WhatsApp<small>English · Español · Kreyòl</small></span><ChatIcon className="w4" /></a>
-          </div>
-        </div>
-      )}
-      <button className="concierge-btn" onClick={() => setOpen((o) => !o)} aria-expanded={open}>
-        <span className="orb" aria-hidden /> Speak with us
-      </button>
-    </>
   );
 }
