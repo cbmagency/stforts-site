@@ -1,5 +1,5 @@
 // Packages as published on the current planning page (planning.stfortsfuneralhome.com).
-// TODO(client): Evans to confirm prices and inclusions before launch.
+// Prices and inclusions confirmed by the client (Oct 20, 2026).
 export const PACKAGES = [
   {
     slug: "direct-cremation",

@@ -1,5 +1,4 @@
-// Service pages. Copy is original to St. Fort's. Prices are previously published
-// "starting at" figures — TODO(client): Evans must confirm before launch.
+// Service pages. Copy is original to St. Fort's. Starting prices confirmed by the client (Oct 20, 2026).
 export type Service = {
   slug: string;
   name: string;
