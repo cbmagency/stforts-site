@@ -76,10 +76,10 @@ export function Paths() {
   return (
     <div className="paths reveal" data-track="paths">
       <a className="path" href={SITE.helpPhoneHref}>
-        <span className="path-k">Someone has passed</span>
+        <span className="path-k">Available 24/7</span>
         <span className="path-t">I need help now</span>
         <span className="path-b">A funeral director answers day and night. We&rsquo;ll tell you exactly what happens next — and take it from there.</span>
-        <span className="path-cta"><PhoneIcon /> Call {SITE.helpPhone}</span>
+        <span className="path-cta"><PhoneIcon /> Call here</span>
       </a>
       <Link className="path" href="/pre-planning">
         <span className="path-k">For the future</span>
@@ -209,12 +209,11 @@ export function Footer() {
           <div data-track="footer">
             <h4>Reach us 24/7</h4>
             <ul>
-              <li><span className="muted">Someone has passed:</span><br /><a href={SITE.helpPhoneHref} style={{ color: "var(--ivory)", fontSize: 20 }}>{SITE.helpPhone}</a></li>
+              <li><span className="muted">Need help now:</span><br /><a href={SITE.helpPhoneHref} style={{ color: "var(--ivory)", fontSize: 20 }}>Call here</a></li>
               <li><span className="muted">Pre-planning &amp; questions:</span><br /><a href={SITE.phoneHref} style={{ color: "var(--ivory)" }}>{SITE.phone}</a></li>
               <li><a href={SITE.whatsappHref} target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
               <li>{SITE.address.street}<br />{SITE.address.city}, FL {SITE.address.postal}</li>
               <li><a href={SITE.directionsHref} target="_blank" rel="noopener noreferrer">Directions</a></li>
-              <li className="muted">Main funeral home line: <a href={SITE.mainLineHref}>{SITE.mainLine}</a></li>
             </ul>
           </div>
         </div>

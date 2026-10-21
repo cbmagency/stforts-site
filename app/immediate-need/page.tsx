@@ -5,7 +5,7 @@ import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Someone Has Passed? Call Now — 24/7 Funeral Help in North Miami Beach | St. Fort's",
-  description: "If a loved one has just passed, call St. Fort's at (305) 710-7919. A funeral director answers 24/7 and guides you through every next step. Serving Miami-Dade & Broward.",
+  description: "If a loved one has just passed, call St. Fort's now. A funeral director answers 24/7 and guides you through every next step. Serving Miami-Dade & Broward.",
   alternates: { canonical: "/immediate-need" },
 };
 
@@ -25,7 +25,7 @@ export default function ImmediateNeed() {
           <h1 className="display">If someone has just passed, <em>we&rsquo;re here right now.</em></h1>
           <p className="lede">Take a breath. You don&rsquo;t need to have any answers yet. Call us, and a funeral director will guide you through the next hour, the next day, and everything after.</p>
           <div className="hero-actions" data-track="immediate_hero">
-            <a className="btn btn-light" href={SITE.helpPhoneHref} style={{ minHeight: 64, fontSize: 18, padding: "0 34px" }}><PhoneIcon /> Call {SITE.helpPhone}</a>
+            <a className="btn btn-light" href={SITE.helpPhoneHref} style={{ minHeight: 64, fontSize: 18, padding: "0 34px" }}><PhoneIcon /> Call now</a>
             <a className="btn btn-ghost" href={SITE.whatsappHref} target="_blank" rel="noopener noreferrer"><ChatIcon /> WhatsApp us</a>
           </div>
           <p className="muted">English · Español · Kreyòl ayisyen</p>

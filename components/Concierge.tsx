@@ -113,7 +113,7 @@ export default function Concierge() {
       "I'm so sorry. You don't need to have anything figured out right now.",
       <div key="c" className="cx-card">
         <p>Call Evans, our funeral director, directly. He answers day and night and will tell you exactly what happens next.</p>
-        <a className="btn btn-light cx-call" href={SITE.helpPhoneHref} data-track="chat_help"><PhoneIcon /> Call {SITE.helpPhone}</a>
+        <a className="btn btn-light cx-call" href={SITE.helpPhoneHref} data-track="chat_help"><PhoneIcon /> Call now</a>
       </div>,
       "Can't talk right now? Leave your name and number and we'll call you right back.",
     ], () => {
@@ -189,13 +189,13 @@ export default function Concierge() {
       track("form_submit", { inquiry_type: L.inquiry_type, via: "chat" });
       try { (window as unknown as { fbq?: (...a: unknown[]) => void }).fbq?.("track", "Lead"); } catch {}
     } catch {
-      say([<span key="e">Something went wrong on our side. Please call us at <a className="link" href={SITE.helpPhoneHref}>{SITE.helpPhone}</a>, we answer 24/7.</span>]);
+      say([<span key="e">Something went wrong on our side. Please <a className="link" href={SITE.helpPhoneHref}>call us here</a>, we answer 24/7.</span>]);
       return;
     }
     const n = firstName(L.name);
     if (L.inquiry_type === "immediate_need") {
       say([`Thank you, ${n}. A funeral director will call you right back.`, "If you need us sooner, call anytime. We're here with you."], () =>
-        setChips([{ label: `Call ${SITE.helpPhone}`, on: () => { location.href = SITE.helpPhoneHref; }, primary: true }]));
+        setChips([{ label: "Call now", on: () => { location.href = SITE.helpPhoneHref; }, primary: true }]));
     } else if (L.inquiry_type === "pre_planning") {
       say([
         `Thank you, ${n}. Evans will have your details before you speak.`,
@@ -286,7 +286,7 @@ export default function Concierge() {
               <strong>St. Fort&rsquo;s Concierge</strong>
               <span>Virtual assistant · <em>Here 24/7</em></span>
             </div>
-            <a className="cx-icon" href={SITE.helpPhoneHref} aria-label={`Call ${SITE.helpPhone}`} data-track="chat_header"><PhoneIcon /></a>
+            <a className="cx-icon" href={SITE.helpPhoneHref} aria-label="Call now" data-track="chat_header"><PhoneIcon /></a>
             <button className="cx-icon" aria-label="Close chat" onClick={() => setOpen(false)}><CloseIcon /></button>
           </header>
           <a className="cx-rating" href={SITE.googleReviewsHref} target="_blank" rel="noopener noreferrer">

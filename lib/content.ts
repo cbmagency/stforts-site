@@ -20,7 +20,7 @@ export const TEAM = [
 // TODO(client): Evans to review every answer before launch.
 export const FAQS = [
   { q: "What should I do when someone passes away in Miami?", a: "Take a breath — you don't need every answer right now. If the passing was unexpected at home, call 911 first. If your loved one was in hospice or a hospital, the staff will guide the first step. Then call us. We answer 24 hours a day and will tell you exactly what happens next." },
-  { q: "Who should I call first?", a: "For an unexpected passing at home, call 911. Otherwise, you can call a funeral director directly. Evans and our team answer day and night at (305) 710-7919." },
+  { q: "Who should I call first?", a: "For an unexpected passing at home, call 911. Otherwise, you can call a funeral director directly. Evans and our team answer day and night." },
   { q: "How much does a funeral or cremation cost?", a: "Direct cremation starts at $1,595, a funeral with cremation starts at $4,995, and a basic burial starts at $5,995. Your final cost depends on your choices, and we review every cost with you before you decide." },
   { q: "Can we have a viewing before cremation?", a: "Yes. Many families choose a private viewing or a full service before cremation." },
   { q: "Are payment options available?", a: "We offer financing options for many families. Every situation is different, so call us and we'll walk you through what's available." },
@@ -54,13 +54,13 @@ export const POSTS: Post[] = [
       { h: "2. If the death happened in a hospital or nursing home" },
       { p: "The staff will handle the first steps. They'll ask which funeral home you'd like to use. You can give them our name, or call us and we'll coordinate directly." },
       { h: "3. Call a funeral home" },
-      { p: "Once you call, a funeral director brings your loved one into their care — day or night. At St. Fort's, we answer 24 hours a day at (305) 710-7919, in English, Spanish or Haitian Creole." },
+      { p: "Once you call, a funeral director brings your loved one into their care — day or night. At St. Fort's, we answer 24 hours a day, in English, Spanish or Haitian Creole." },
       { h: "4. What to gather (when you're ready)" },
       { list: ["Your loved one's full legal name, date of birth and Social Security number", "Their parents' names, including mother's maiden name", "Military discharge papers (DD-214), if they served", "Any pre-arranged funeral plan or written wishes", "A favorite photo for the service and obituary"] },
       { h: "5. What can wait" },
       { p: "Almost everything else. You don't need to decide on burial or cremation in the first hour. You don't need to write the obituary tonight. A good funeral director will slow things down, not rush you." },
       { h: "You don't have to do this alone" },
-      { p: "If you're reading this because someone just passed, we're sorry. Call us any time at (305) 710-7919, and we'll take it from here." },
+      { p: "If you're reading this because someone just passed, we're sorry. Call us any time, and we'll take it from here." },
     ],
   },
   {

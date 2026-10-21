@@ -121,8 +121,8 @@ function NativeLeadForm({ variant = "callback", source }: { variant?: Variant; s
       <div className="form-ok" role="status">
         <p className="h3" style={{ color: "var(--ivory)" }}>Thank you.</p>
         <p style={{ marginTop: 10 }}>
-          A member of our team will reach out shortly. If this is urgent, please call us now at{" "}
-          <a className="link" href={SITE.helpPhoneHref} data-track="form_thanks">{SITE.helpPhone}</a>.
+          A member of our team will reach out shortly. If this is urgent,{" "}
+          <a className="link" href={SITE.helpPhoneHref} data-track="form_thanks">call here</a> now.
         </p>
       </div>
     );
