@@ -199,8 +199,6 @@ export function Footer() {
               <li><Link href="/immediate-need">Immediate need</Link></li>
               <li><Link href="/pricing">Pricing</Link></li>
               <li><Link href="/pre-planning">Pre-planning</Link></li>
-              <li><Link href="/our-founder">Our founder</Link></li>
-              <li><Link href="/our-team">Our team</Link></li>
               <li><Link href="/insights">Insights</Link></li>
               <li><Link href="/areas">Service areas</Link></li>
               <li><Link href="/contact">Contact</Link></li>

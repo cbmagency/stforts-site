@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import HeroScroll from "@/components/HeroScroll";
 import { AreaChips, ClosingCta, Faq, JsonLd, Paths, PricingCards, Reviews, ServiceRows, faqSchema } from "@/components/blocks";
 import { ArrowIcon } from "@/components/icons";
-import { FAQS, POSTS, TEAM } from "@/lib/content";
+import { FAQS, POSTS } from "@/lib/content";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -14,7 +14,6 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const lead = TEAM.slice(0, 4);
   return (
     <>
       <HeroScroll />
@@ -52,9 +51,8 @@ export default function Home() {
         <div className="wrap split">
           <figure className="reveal" style={{ margin: 0, display: "grid", gap: 14 }}>
             <div className="frame" style={{ aspectRatio: "400/416", maxWidth: 520 }}>
-              <img src="/images/st-fort-family.jpg" alt="The St. Fort family, owners of St. Fort's Funeral Home & Cremation in North Miami Beach" loading="lazy" />
+              <img src="/images/families.jpg" alt="A family comforting one another after a memorial service at St. Fort's Funeral Home in North Miami Beach" loading="lazy" />
             </div>
-            <figcaption className="muted">The St. Fort family</figcaption>
           </figure>
           <div className="reveal" style={{ display: "grid", gap: 28 }}>
             <p className="eyebrow">A family-owned funeral home in North Miami Beach</p>
@@ -128,29 +126,6 @@ export default function Home() {
             <p className="lede">
               The City of North Miami Beach renamed a stretch of NE 165th Street &ldquo;St. Fort Drive&rdquo; in honor of the St. Fort family, two generations of funeral service, from Haiti to North Miami Beach. Our funeral home sits right beneath that sign.
             </p>
-            <Link className="link" href="/our-founder" style={{ justifySelf: "start" }}>Meet our founder, Evans St. Fort</Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Team preview — stone */}
-      <section className="section stone" aria-labelledby="team-h">
-        <div className="wrap" style={{ display: "grid", gap: 56 }}>
-          <div className="reveal" style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "end", gap: 24 }}>
-            <div style={{ display: "grid", gap: 18 }}>
-              <p className="eyebrow">Our team</p>
-              <h2 id="team-h" className="h2">The funeral directors <em>who will care for your family.</em></h2>
-            </div>
-            <Link href="/our-team" className="btn btn-outline-dark">Meet the full team <ArrowIcon /></Link>
-          </div>
-          <div className="team-grid">
-            {lead.map((m) => (
-              <div key={m.name} className="team-card reveal">
-                <img src={m.photo} alt={`${m.name}, ${m.title}`} loading="lazy" width={296} height={395} />
-                <p className="team-name" style={{ color: "var(--stone-ink)" }}>{m.name}</p>
-                <p className="team-title">{m.title}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
