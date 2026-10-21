@@ -115,7 +115,7 @@ export default function Home() {
       </section>
 
       {/* St. Fort Drive */}
-      <section className="section" aria-labelledby="drive-h">
+      <section className="section stone" aria-labelledby="drive-h">
         <div className="wrap split flip">
           <div className="frame reveal" style={{ aspectRatio: "1/1" }}>
             <img src="/images/st-fort-drive.jpg" alt="The St. Fort Drive street sign on NE 165th Street above St. Fort's Funeral Home in North Miami Beach" loading="lazy" />
