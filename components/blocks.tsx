@@ -233,7 +233,7 @@ export function Footer() {
           </div>
         </div>
         <div className="footer-base">
-          <span>© {new Date().getFullYear()} {SITE.name}. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} {SITE.name}. All rights reserved. · Designed by <a href="https://www.cbmagencymiami.com" target="_blank" rel="noopener">CBM Agency</a></span>
           <span><a href="https://www.stfortsfuneralhome.com/obituaries/">Obituaries</a> · <a href={SITE.social.facebook}>Facebook</a> · <a href={SITE.social.instagram}>Instagram</a></span>
         </div>
       </div>
